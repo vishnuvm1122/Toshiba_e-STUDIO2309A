@@ -63,7 +63,7 @@ INSTALLATION
 
 Download or clone the repository:
 
-git clone https://github.com/yourusername/Toshiba_e-STUDIO2309A_Linux_Driver.git
+git clone https://github.com/vishnuvm1122/Toshiba_e-STUDIO2309A.git
 
 Enter the project directory:
 
@@ -79,22 +79,9 @@ sudo ./Toshiba_e-STUDIO2309A_Driver
 
 When prompted, enter your printer IP address.
 
-Example:
-192.168.1.200
 
 ------------------------------------------------------------
 
-MANUAL PRINTER SETUP (OPTIONAL)
-
-If you prefer to add the printer manually, run:
-
-sudo lpadmin -p Toshiba2309A -E -v socket://192.168.1.200:9100 -m foomatic-db-compressed-ppds:0/ppd/foomatic-ppd/Generic-PCL_6_PCL_XL_Printer-pxlmono.ppd
-
-Restart printing service:
-
-sudo systemctl restart cups
-
-------------------------------------------------------------
 
 TEST PRINTING
 
@@ -120,11 +107,11 @@ sudo systemctl restart cups
 
 Check printer network connection:
 
-ping 192.168.1.200
+ping IP
 
 Check printer port:
 
-nc -zv 192.168.1.200 9100
+nc -zv IP 9100
 
 ------------------------------------------------------------
 
